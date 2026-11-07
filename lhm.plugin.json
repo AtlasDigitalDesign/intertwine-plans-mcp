@@ -1,0 +1,244 @@
+{
+  "author": "Atlas Digital Design LLC (https://atlasdigital.design)",
+  "cloudEndpoint": "https://agents.intertwinehouseplans.com/mcp",
+  "description": "Read-only MCP server for searching Angela Kamer's coastal and Southern house plans by bedrooms, square feet, lot width, pilings and elevator, with photos, current prices and lot-fit screening. Every result links to the plan page on intertwinehouseplans.com.",
+  "homepage": "https://agents.intertwinehouseplans.com/docs",
+  "identifier": "atlasdigitaldesign-intertwine-plans-mcp",
+  "name": "Intertwine House Plans: Plan Finder",
+  "prompts": [],
+  "resources": [],
+  "tags": [
+    "mcp",
+    "mcp-server",
+    "house-plans",
+    "coastal",
+    "real-estate",
+    "shopify",
+    "cloudflare-workers"
+  ],
+  "tools": [
+    {
+      "name": "search_plans",
+      "title": "Search house plans",
+      "description": "Search Intertwine House Plans by the specs a buyer cares about: bedrooms, bathrooms, heated square feet, stories, width and depth, elevated or pilings foundation, elevator, drive-under garage, in-law suite, garage ADU, and style (beach, cottage, Low Country, carriage house). Returns matching plans with key specs, a photo, the current starting price (and sale price when one is running) and the plan's page.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "minBedrooms": {
+            "type": "number"
+          },
+          "maxBedrooms": {
+            "type": "number"
+          },
+          "minBathrooms": {
+            "type": "number"
+          },
+          "minSqFt": {
+            "type": "number",
+            "description": "Minimum heated square feet"
+          },
+          "maxSqFt": {
+            "type": "number",
+            "description": "Maximum heated square feet"
+          },
+          "stories": {
+            "type": "integer"
+          },
+          "maxWidthFt": {
+            "type": "number",
+            "description": "Widest the house can be, in feet"
+          },
+          "maxDepthFt": {
+            "type": "number"
+          },
+          "elevated": {
+            "type": "boolean",
+            "description": "Raised foundation (pilings, piers or elevated CMU), for flood zones and coastal lots"
+          },
+          "elevator": {
+            "type": "boolean"
+          },
+          "driveUnder": {
+            "type": "boolean"
+          },
+          "inLawSuite": {
+            "type": "boolean"
+          },
+          "garageADU": {
+            "type": "boolean",
+            "description": "Garage with an apartment or ADU"
+          },
+          "feature": {
+            "type": "string",
+            "enum": [
+              "elevated coastal",
+              "pilings and stilts",
+              "drive-under garage",
+              "beach",
+              "in-law suite",
+              "elevator",
+              "cottage",
+              "carriage house",
+              "garage ADU",
+              "Low Country"
+            ],
+            "description": "A style or collection"
+          },
+          "text": {
+            "type": "string",
+            "description": "Words to match in the plan name or summary, like porch or courtyard"
+          },
+          "maxPrice": {
+            "type": "number",
+            "description": "Highest starting price in USD"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 25,
+            "default": 10
+          }
+        }
+      },
+      "annotations": {
+        "title": "Search house plans",
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_plan",
+      "title": "Get one plan",
+      "description": "Everything about one plan, by name, other published name, or handle (for example The Heron or the-heron): specs, footprint, foundation options, garage, ceilings, roof pitch, framing, smallest lot it suits, photos and floor plans, every package with its current and regular price, the full design write-up, the study set link and price, how to request changes, and its page.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "plan": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "plan"
+        ]
+      },
+      "annotations": {
+        "title": "Get one plan",
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "plans_for_lot",
+      "title": "Plans that fit a lot",
+      "description": "Given a lot's width and depth in feet and its setbacks, returns the plans whose footprint fits the buildable area. A first screen only: confirm setbacks, flood zone and local rules with the jurisdiction and the designer.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "lotWidthFt": {
+            "type": "number"
+          },
+          "lotDepthFt": {
+            "type": "number"
+          },
+          "sideSetbackFt": {
+            "type": "number",
+            "default": 5,
+            "description": "Each side"
+          },
+          "frontSetbackFt": {
+            "type": "number",
+            "default": 20
+          },
+          "rearSetbackFt": {
+            "type": "number",
+            "default": 15
+          },
+          "elevated": {
+            "type": "boolean",
+            "description": "Only raised-foundation plans"
+          },
+          "minBedrooms": {
+            "type": "number"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 25,
+            "default": 10
+          }
+        },
+        "required": [
+          "lotWidthFt",
+          "lotDepthFt"
+        ]
+      },
+      "annotations": {
+        "title": "Plans that fit a lot",
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_features",
+      "title": "List styles and features",
+      "description": "The styles and features plans are grouped by, with how many plans carry each.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "title": "List styles and features",
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "about_designer",
+      "title": "About the designer",
+      "description": "Who draws these plans, what plan sets come as, study sets, and how to ask for changes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "title": "About the designer",
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "buying_help",
+      "title": "Buying help",
+      "description": "Answers a buyer's questions before purchase: what a plan set includes, study sets, changing a plan, why there is no cost-to-build calculator and how to get a real number, plans that have been built (with photos), and the store's FAQ. Optionally pass words to match FAQ questions.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "enum": [
+              "whats_included",
+              "study_sets",
+              "modifications",
+              "cost_to_build",
+              "built_homes",
+              "faq"
+            ]
+          },
+          "question": {
+            "type": "string",
+            "description": "Words to match in the FAQ, like license or permit"
+          }
+        },
+        "required": [
+          "topic"
+        ]
+      },
+      "annotations": {
+        "title": "Buying help",
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    }
+  ],
+  "version": "1.2.0"
+}
