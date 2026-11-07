@@ -23,7 +23,11 @@
   "maxRidgeHeight": "32' 9\"",
   "studySetAvailable": false,
   "features": [],
-  "summary": "2,998 sq ft multi-suite lake house plan with 5 beds & 4.5 baths. Dual primary suites, en-suite access for every bedroom, outdoor fireplace."
+  "summary": "2,998 sq ft multi-suite lake house plan with 5 beds & 4.5 baths. Dual primary suites, en-suite access for every bedroom, outdoor fireplace.",
+  "garage": "2-car attached",
+  "ceilings": "9' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls"
  },
  {
   "handle": "3699-blue-isle",
@@ -55,7 +59,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,699 sq ft coastal house plan with 5-6 beds & 5 baths. Private balcony per bedroom, bi-fold doors to outdoor kitchen, flexible bonus room."
+  "summary": "3,699 sq ft coastal house plan with 5-6 beds & 5 baths. Private balcony per bedroom, bi-fold doors to outdoor kitchen, flexible bonus room.",
+  "alsoKnownAs": [
+   "Capri Isle"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "3:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "casa-azul",
@@ -88,7 +101,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,058 sq ft elevated reverse-living coastal house plan with 3-4 beds & 4 baths. Top-floor vaulted living, exposed beams, chef's pantry, covered porch."
+  "summary": "3,058 sq ft elevated reverse-living coastal house plan with 3-4 beds & 4 baths. Top-floor vaulted living, exposed beams, chef's pantry, covered porch.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 9' First / 10' Top Floor",
+  "roofPitch": "9:12 Primary / 12:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "cliffwood-garage-adu-plan",
@@ -117,7 +136,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "640 sq ft apartment above a 2-car garage with 1 bed, walk-in closet, full bath, kitchen, living area, W/D & storage. Built for rental income or guests."
+  "summary": "640 sq ft apartment above a 2-car garage with 1 bed, walk-in closet, full bath, kitchen, living area, W/D & storage. Built for rental income or guests.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' Garage / 9' Upper Level",
+  "roofPitch": "10:12 Primary / 4:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "cloudy-bay-garage-adu",
@@ -146,7 +170,15 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "650 sq ft coastal garage ADU plan with 1 bed & 1 bath. Open living, full kitchen, 9' ceilings, walk-in closet with W/D."
+  "summary": "650 sq ft coastal garage ADU plan with 1 bed & 1 bath. Open living, full kitchen, 9' ceilings, walk-in closet with W/D.",
+  "alsoKnownAs": [
+   "Grace Bay Cottage"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "10' Garage / 9' Upper Living",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "cloudy-bay",
@@ -174,7 +206,15 @@
   "features": [
    "Low Country"
   ],
-  "summary": "2,730 sq ft low country coastal house plan with 4 beds & 4 baths. Timber-framed gables, metal roof, exposed beams, primary suite with private sun deck."
+  "summary": "2,730 sq ft low country coastal house plan with 4 beds & 4 baths. Timber-framed gables, metal roof, exposed beams, primary suite with private sun deck.",
+  "alsoKnownAs": [
+   "Grace Bay Cottage"
+  ],
+  "garage": "2-car detached",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "2299-sq-ft-ellies-hideaway",
@@ -207,7 +247,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,299 sq ft elevated coastal house plan with 5 beds, 4.5 baths, a plunge pool and outdoor kitchen, an elevator and a side-entry garage with room for a golf cart."
+  "summary": "2,299 sq ft elevated coastal house plan with 5 beds, 4.5 baths, a plunge pool and outdoor kitchen, an elevator and a side-entry garage with room for a golf cart.",
+  "garage": "2.5-car side-entry with golf cart bay",
+  "ceilings": "10' Kitchen / 9' Suites and Bedrooms / Vaulted Living and Bedroom 4",
+  "roofPitch": "8:12 Primary / 3:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "haddies-hideaway",
@@ -238,7 +284,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,450 sq ft elevated reverse-living coastal house plan with 4 beds & 3.5 baths. Upper-level living & dining for views, spa primary suite."
+  "summary": "3,450 sq ft elevated reverse-living coastal house plan with 4 beds & 3.5 baths. Upper-level living & dining for views, spa primary suite.",
+  "alsoKnownAs": [
+   "Haddrell Point"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "8' Lower / 9' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "haddies-hideaway-2700r",
@@ -270,7 +325,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,797 sq ft reverse-living coastal house plan with 3-4 beds & 4 baths. Island kitchen, optional game room & 3-car drive-under garage."
+  "summary": "2,797 sq ft reverse-living coastal house plan with 3-4 beds & 4 baths. Island kitchen, optional game room & 3-car drive-under garage.",
+  "alsoKnownAs": [
+   "Morris Island I"
+  ],
+  "garage": "3-car drive-under",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "4:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and an optional finished level",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "haddies-hideaway-2700rflg",
@@ -302,7 +366,15 @@
    "in-law suite",
    "drive-under garage"
   ],
-  "summary": "2,797 sq ft elevated reverse-living coastal house plan with 4 beds & 4-5 baths. Front-load garage, elevator, top-level open living, island kitchen."
+  "summary": "2,797 sq ft elevated reverse-living coastal house plan with 4 beds & 4-5 baths. Front-load garage, elevator, top-level open living, island kitchen.",
+  "alsoKnownAs": [
+   "Morris Island I"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "4:12 Primary / 6:12 Secondary",
+  "groundLevel": "Parking and an optional finished level",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "haddies-hideaway-3000",
@@ -332,7 +404,16 @@
    "pilings and stilts",
    "drive-under garage"
   ],
-  "summary": "3,089 sq ft elevated modern coastal house plan with 4 beds & 3.5 baths. Rear-view deck, private study, primary suite with freestanding tub."
+  "summary": "3,089 sq ft elevated modern coastal house plan with 4 beds & 3.5 baths. Rear-view deck, private study, primary suite with freestanding tub.",
+  "alsoKnownAs": [
+   "Belhaven"
+  ],
+  "garage": "3-car drive-under",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "3.5:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "haddies-hideaway-asmu",
@@ -364,7 +445,13 @@
    "in-law suite",
    "drive-under garage"
   ],
-  "summary": "3,121 sq ft elevated all-suites coastal house plan with 4 beds & 4.5 baths. Primary suite upstairs, en-suite baths for every bedroom, elevator."
+  "summary": "3,121 sq ft elevated all-suites coastal house plan with 4 beds & 4.5 baths. Primary suite upstairs, en-suite baths for every bedroom, elevator.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "4:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "haddies-hideaway-all-suites",
@@ -395,7 +482,13 @@
    "in-law suite",
    "drive-under garage"
   ],
-  "summary": "2,939 sq ft elevated all-suites coastal house plan with 4 beds & 4.5 baths. Dual primary suites, en-suite for every bedroom, coffee bar lounge."
+  "summary": "2,939 sq ft elevated all-suites coastal house plan with 4 beds & 4.5 baths. Dual primary suites, en-suite for every bedroom, coffee bar lounge.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "4:12 Primary / 3:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "2805-sq-ft-islabella",
@@ -428,7 +521,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,805 sq ft elevated coastal house plan with 5 beds, 4.5 baths, an elevator to every floor, two primary suites and a side-entry 2-car garage."
+  "summary": "2,805 sq ft elevated coastal house plan with 5 beds, 4.5 baths, an elevator to every floor, two primary suites and a side-entry 2-car garage.",
+  "garage": "2-car side-entry",
+  "ceilings": "8' 8\" Ground / 9' First / 9' Second",
+  "roofPitch": "10:12 Primary / 3:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking, storage and a heated entry",
+  "fitsLotsFromFt": 45
  },
  {
   "handle": "little-maple",
@@ -456,7 +555,12 @@
   "features": [
    "Low Country"
   ],
-  "summary": "2,500 sq ft Low Country house plan with 3-4 beds & 3 baths. Home office, gas fireplace, kitchen island, upstairs loft with built-in desk."
+  "summary": "2,500 sq ft Low Country house plan with 3-4 beds & 3 baths. Home office, gas fireplace, kitchen island, upstairs loft with built-in desk.",
+  "garage": "2-car attached",
+  "ceilings": "9' First / 8' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "little-oak",
@@ -488,7 +592,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,600 sq ft coastal house plan with 3 beds & 2 baths. Board & batten siding, metal roof, elevator, 5-fixture primary bath & drive-under 2-car garage."
+  "summary": "1,600 sq ft coastal house plan with 3 beds & 2 baths. Board & batten siding, metal roof, elevator, 5-fixture primary bath & drive-under 2-car garage.",
+  "alsoKnownAs": [
+   "Ellerbee Cottage"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "10' Lower / 9' First",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "little-oak-enclosed",
@@ -519,7 +632,13 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "1,800 sq ft elevated coastal country house plan with 3 beds & 2 baths. Enclosed dining, board & batten siding, metal roof, elevator."
+  "summary": "1,800 sq ft elevated coastal country house plan with 3 beds & 2 baths. Enclosed dining, board & batten siding, metal roof, elevator.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' Lower / 9' First",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "little-torch",
@@ -545,7 +664,14 @@
   "maxRidgeHeight": "30' 0\"",
   "studySetAvailable": false,
   "features": [],
-  "summary": "2,242 sq ft New American lake house plan with 3-4 beds & 3 baths. 19-ft vaulted great room, natural wood exterior, covered porch, open decks."
+  "summary": "2,242 sq ft New American lake house plan with 3-4 beds & 3 baths. 19-ft vaulted great room, natural wood exterior, covered porch, open decks.",
+  "alsoKnownAs": [
+   "Aberdeen"
+  ],
+  "garage": "2-car attached",
+  "ceilings": "9' First / 9' Second / 19' Vaulted Great Room",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls"
  },
  {
   "handle": "1430-sq-ft-magnolia-beach-hut",
@@ -578,7 +704,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,430 sq ft elevated coastal cottage house plan with 3 beds, 2.5 baths and an elevator. 30' front porch, vaulted living, rear grilling deck."
+  "summary": "1,430 sq ft elevated coastal cottage house plan with 3 beds, 2.5 baths and an elevator. 30' front porch, vaulted living, rear grilling deck.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 9' First",
+  "roofPitch": "8:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "1430-sq-ft-magnolia-beach-hut-chp",
@@ -611,7 +743,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,547 sq ft elevated coastal cottage with 3 beds, 2 baths and an elevator. 30' front porch, vaulted living, grilling deck, drive-under 2-car carport."
+  "summary": "1,547 sq ft elevated coastal cottage with 3 beds, 2 baths and an elevator. 30' front porch, vaulted living, grilling deck, drive-under 2-car carport.",
+  "alsoKnownAs": [
+   "Birdsong Cottage"
+  ],
+  "garage": "2-car drive-under carport",
+  "ceilings": "9' Lower / 9' First",
+  "roofPitch": "8:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "magnolia-cottage",
@@ -643,7 +784,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,600 sq ft beach cottage with 3 beds & 2.5 baths. Front porch, vaulted living, kitchen island, 5-fixture primary bath & drive-under 2-3 car garage."
+  "summary": "1,600 sq ft beach cottage with 3 beds & 2.5 baths. Front porch, vaulted living, kitchen island, 5-fixture primary bath & drive-under 2-3 car garage.",
+  "alsoKnownAs": [
+   "Neil's Harbor"
+  ],
+  "garage": "2-3 car drive-under",
+  "ceilings": "10' Lower / 9' First",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "magnolia-cottage-ii",
@@ -676,7 +826,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,000 sq ft elevated coastal beach house plan for narrow lots with 3-4 beds & 2.5-3.5 baths. 5-fixture primary bath, sliding doors, kitchen island."
+  "summary": "2,000 sq ft elevated coastal beach house plan for narrow lots with 3-4 beds & 2.5-3.5 baths. 5-fixture primary bath, sliding doors, kitchen island.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and an optional finished level",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "meyer-garage",
@@ -705,7 +861,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "650 sq ft garage ADU with 1 bed, 1 bath, vaulted living room, loft, 144 sq ft deck, back patio with outdoor sink & 2-car parking."
+  "summary": "650 sq ft garage ADU with 1 bed, 1 bath, vaulted living room, loft, 144 sq ft deck, back patio with outdoor sink & 2-car parking.",
+  "garage": "2-car drive-under",
+  "ceilings": "8' Lower / 8' First / 6' 4\" Loft",
+  "roofPitch": "7:12 Primary / 12:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "oak-leaf",
@@ -737,7 +898,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,280 sq ft two-story Elevated Coastal Beach House Plan with 3 beds & 3.5 baths. Rooftop garden, optional hot tub & outdoor kitchen, elevator."
+  "summary": "3,280 sq ft two-story Elevated Coastal Beach House Plan with 3 beds & 3.5 baths. Rooftop garden, optional hot tub & outdoor kitchen, elevator.",
+  "garage": "3-car drive-under",
+  "ceilings": "9' Lower / 10' First / 9' Second",
+  "roofPitch": "4:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 45
  },
  {
   "handle": "2718-sq-ft-outerbanks-beach-house",
@@ -769,7 +936,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,718 sq ft coastal house plan with 5 beds & 4.5 baths. 4-bed bunk room, beverage bar, private vanities, sleeps 12-14 & drive-under 2-car carport."
+  "summary": "2,718 sq ft coastal house plan with 5 beds & 4.5 baths. 4-bed bunk room, beverage bar, private vanities, sleeps 12-14 & drive-under 2-car carport.",
+  "garage": "2-car drive-under carport",
+  "ceilings": "8' 8\" First / 8' Second",
+  "roofPitch": "7.5:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 45
  },
  {
   "handle": "2018-sq-ft-palmetto-beach-hut",
@@ -802,7 +975,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,018 sq ft elevated coastal cottage house plan on a narrow 30' footprint with 4 beds & 3 baths. Vaulted living, dual-sided fireplace."
+  "summary": "2,018 sq ft elevated coastal cottage house plan on a narrow 30' footprint with 4 beds & 3 baths. Vaulted living, dual-sided fireplace.",
+  "garage": "2-car drive-under",
+  "ceilings": "8' 8\" Lower / 9' First",
+  "roofPitch": "8:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and a guest suite with kitchen",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "penny-lane",
@@ -830,7 +1009,14 @@
   "features": [
    "Low Country"
   ],
-  "summary": "1,815 sq ft Coastal Low Country house plan with 3 beds & 2.5 baths. Front & back porches, primary porch access, built-in shelves, large windows."
+  "summary": "1,815 sq ft Coastal Low Country house plan with 3 beds & 2.5 baths. Front & back porches, primary porch access, built-in shelves, large windows.",
+  "alsoKnownAs": [
+   "Florence Cottage"
+  ],
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "8:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 50
  },
  {
   "handle": "sandy-dune",
@@ -863,7 +1049,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,464 sq ft elevated shingle-style coastal house plan with 3-4 beds & 4.5 baths. Fireplace, multiple decks, elevator, chef's pantry."
+  "summary": "3,464 sq ft elevated shingle-style coastal house plan with 3-4 beds & 4.5 baths. Fireplace, multiple decks, elevator, chef's pantry.",
+  "alsoKnownAs": [
+   "Amherst"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "10' Lower / 10' First / 9' Second",
+  "roofPitch": "4:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 45
  },
  {
   "handle": "sandy-dune-n",
@@ -896,7 +1091,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,588 sq ft elevated contemporary coastal house plan with 4 beds & 4.5 baths. Multiple decks, elevator, chef's pantry, home office."
+  "summary": "3,588 sq ft elevated contemporary coastal house plan with 4 beds & 4.5 baths. Multiple decks, elevator, chef's pantry, home office.",
+  "alsoKnownAs": [
+   "Castilia"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "10' Lower / 10' First / 9' Second",
+  "roofPitch": "4:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 45
  },
  {
   "handle": "skippers-den",
@@ -924,7 +1128,15 @@
   "features": [
    "Low Country"
   ],
-  "summary": "3,438 sq ft low country coastal house plan with 4-5 beds & 5 baths. Main-floor guest suite, morning room, all en-suite upstairs bedrooms."
+  "summary": "3,438 sq ft low country coastal house plan with 4-5 beds & 5 baths. Main-floor guest suite, morning room, all en-suite upstairs bedrooms.",
+  "alsoKnownAs": [
+   "Port Townsend"
+  ],
+  "garage": "2-car detached",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "the-addie",
@@ -956,7 +1168,13 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "2,814 sq ft elevated low country coastal house plan with 4 beds & 3.5 baths. Screened porch, grill deck, coffered kitchen ceiling, freestanding tub."
+  "summary": "2,814 sq ft elevated low country coastal house plan with 4 beds & 3.5 baths. Screened porch, grill deck, coffered kitchen ceiling, freestanding tub.",
+  "garage": "2-car drive-under",
+  "ceilings": "8' Lower / 10' First / 9' Second",
+  "roofPitch": "12:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 50
  },
  {
   "handle": "the-blue-house",
@@ -985,7 +1203,14 @@
    "cottage",
    "beach"
   ],
-  "summary": "1,074 sq ft 2-story house plan with 2 beds & 2.5 baths. Front porch, window seat, open main level, each bedroom with private full bath."
+  "summary": "1,074 sq ft 2-story house plan with 2 beds & 2.5 baths. Front porch, window seat, open main level, each bedroom with private full bath.",
+  "alsoKnownAs": [
+   "Blue Hill Cottage"
+  ],
+  "ceilings": "9' First / 8' Second",
+  "roofPitch": "12:12",
+  "framing": "2x4 exterior walls",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "the-chestnut",
@@ -1017,7 +1242,16 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "2,855 sq ft elevated low country house plan with 4 beds & 4.5 baths. Bi-fold glass doors, screened porch, large kitchen, elevator & a full primary bath."
+  "summary": "2,855 sq ft elevated low country house plan with 4 beds & 4.5 baths. Bi-fold glass doors, screened porch, large kitchen, elevator & a full primary bath.",
+  "alsoKnownAs": [
+   "Half Crescent Cottage"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 50
  },
  {
   "handle": "the-curtis",
@@ -1048,7 +1282,16 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "3,364 sq ft elevated coastal waterfront house plan with 4 beds & 3.5 baths. Gas fireplace, exposed beams, elevator, loft with beverage bar."
+  "summary": "3,364 sq ft elevated coastal waterfront house plan with 4 beds & 3.5 baths. Gas fireplace, exposed beams, elevator, loft with beverage bar.",
+  "alsoKnownAs": [
+   "Culpeper Point"
+  ],
+  "garage": "2-car drive-under + golf cart bay",
+  "ceilings": "8' Lower / 10' First / 9' Second",
+  "roofPitch": "12:12 Primary / 6:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-cypress",
@@ -1080,7 +1323,12 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "3,115 sq ft elevated low country coastal house plan with 4 beds & 3.5 baths. Vaulted kitchen, walk-in pantry, elevator, 3 outdoor spaces."
+  "summary": "3,115 sq ft elevated low country coastal house plan with 4 beds & 3.5 baths. Vaulted kitchen, walk-in pantry, elevator, 3 outdoor spaces.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "6:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage"
  },
  {
   "handle": "1784-sq-ft-the-ellie",
@@ -1112,7 +1360,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,784 sq ft elevated coastal craftsman house plan with 2-3 beds & 2.5-3.5 baths. Vaulted living, gas fireplace, 45-ft deck, optional lower level."
+  "summary": "1,784 sq ft elevated coastal craftsman house plan with 2-3 beds & 2.5-3.5 baths. Vaulted living, gas fireplace, 45-ft deck, optional lower level.",
+  "alsoKnownAs": [
+   "Saxton Cove"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "9' Lower / 10' Main",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and an optional finished level",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-elsey",
@@ -1138,7 +1395,10 @@
   "maxRidgeHeight": "32' 0\"",
   "studySetAvailable": false,
   "features": [],
-  "summary": "2,735 sq ft coastal house plan with 4 beds & 4 baths. Main-floor guest suite & office, screened porch, en-suite baths for every bedroom."
+  "summary": "2,735 sq ft coastal house plan with 4 beds & 4 baths. Main-floor guest suite & office, screened porch, en-suite baths for every bedroom.",
+  "ceilings": "9' First / 9' Second",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "the-gray-house",
@@ -1172,7 +1432,13 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,144 sq ft elevated low country Cottage house plan with 2 beds & 2.5 baths. Pier/piling foundation, open-concept living floor."
+  "summary": "1,144 sq ft elevated low country Cottage house plan with 2 beds & 2.5 baths. Pier/piling foundation, open-concept living floor.",
+  "garage": "1-car attached",
+  "ceilings": "8' Lower / 9' Main / 8' Bedroom",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "the-green-house",
@@ -1200,7 +1466,14 @@
   "features": [
    "cottage"
   ],
-  "summary": "955 sq ft cottage with 2 beds & 1.5 baths. Open floor plan, built-in storage, chef's kitchen & back porch."
+  "summary": "955 sq ft cottage with 2 beds & 1.5 baths. Open floor plan, built-in storage, chef's kitchen & back porch.",
+  "alsoKnownAs": [
+   "Sister Bay"
+  ],
+  "ceilings": "9' First / 8' Second",
+  "roofPitch": "12:12",
+  "framing": "2x4 exterior walls",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "the-heron",
@@ -1232,7 +1505,16 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "3,214 sq ft elevated low country coastal house plan with 4 beds & 3.5 baths. Main-floor primary suite, U-shaped staircase, elevator, screened porch."
+  "summary": "3,214 sq ft elevated low country coastal house plan with 4 beds & 3.5 baths. Main-floor primary suite, U-shaped staircase, elevator, screened porch.",
+  "alsoKnownAs": [
+   "Lambert's Cottage"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "8' 8\" Lower / 10' First / 9' Second",
+  "roofPitch": "12:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 50
  },
  {
   "handle": "the-holly",
@@ -1263,7 +1545,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "1,495 sq ft elevated narrow-lot coastal house plan with 3 beds & 2.5 baths. Vaulted living, grill deck, kitchen island, 4-fixture primary bath."
+  "summary": "1,495 sq ft elevated narrow-lot coastal house plan with 3 beds & 2.5 baths. Vaulted living, grill deck, kitchen island, 4-fixture primary bath.",
+  "alsoKnownAs": [
+   "Linden Cottage"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "8' 8\" Ground / 9' First",
+  "roofPitch": "7:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "the-iris",
@@ -1289,7 +1580,11 @@
   "maxRidgeHeight": "33' 4\"",
   "studySetAvailable": false,
   "features": [],
-  "summary": "2,637 sq ft coastal craftsman house plan with 3-4 beds & 3.5 baths. Main-floor guest suite, Jack & Jill bath, screened porch with pass-through bar."
+  "summary": "2,637 sq ft coastal craftsman house plan with 3-4 beds & 3.5 baths. Main-floor guest suite, Jack & Jill bath, screened porch with pass-through bar.",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 45
  },
  {
   "handle": "the-lowell",
@@ -1321,7 +1616,16 @@
    "in-law suite",
    "drive-under garage"
   ],
-  "summary": "3,125 sq ft elevated Low Country house plan with 3-4 beds & 3.5 baths. Wraparound porch, screened porch with fireplace, main-floor primary suite, loft."
+  "summary": "3,125 sq ft elevated Low Country house plan with 3-4 beds & 3.5 baths. Wraparound porch, screened porch with fireplace, main-floor primary suite, loft.",
+  "alsoKnownAs": [
+   "Eldridge Bay Cottage"
+  ],
+  "garage": "3-car drive-under",
+  "ceilings": "8' Lower / 10' First / 9' Second",
+  "roofPitch": "12:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 50
  },
  {
   "handle": "2532-sq-ft-the-macy",
@@ -1354,7 +1658,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,532 sq ft elevated coastal contemporary house plan with 4 beds & 4 baths. All en-suite bedrooms, butler's pantry, fireplace, elevator, covered porches."
+  "summary": "2,532 sq ft elevated coastal contemporary house plan with 4 beds & 4 baths. All en-suite bedrooms, butler's pantry, fireplace, elevator, covered porches.",
+  "alsoKnownAs": [
+   "Calliope Cottage"
+  ],
+  "garage": "2-car drive-under carport",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "8:12 Primary / 4:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "2532-sq-ft-the-macy-2",
@@ -1387,7 +1700,16 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "2,532 sq ft elevated coastal contemporary house plan with 4 beds & 4 baths. Dual primary baths, all en-suite bedrooms, butler's pantry, fireplace."
+  "summary": "2,532 sq ft elevated coastal contemporary house plan with 4 beds & 4 baths. Dual primary baths, all en-suite bedrooms, butler's pantry, fireplace.",
+  "alsoKnownAs": [
+   "Calliope Cottage"
+  ],
+  "garage": "2-car drive-under carport",
+  "ceilings": "9' Lower / 9' First / 9' Second",
+  "roofPitch": "8:12 Primary / 4:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "the-maple",
@@ -1413,7 +1735,14 @@
   "maxRidgeHeight": "35' 0\"",
   "studySetAvailable": true,
   "features": [],
-  "summary": "2,880 sq ft 2-story house plan with 3-4 beds & 4 baths. Wraparound porch, main-floor guest suite & office, open loft, en-suite bedrooms."
+  "summary": "2,880 sq ft 2-story house plan with 3-4 beds & 4 baths. Wraparound porch, main-floor guest suite & office, open loft, en-suite bedrooms.",
+  "alsoKnownAs": [
+   "Boswell Park"
+  ],
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "3492-sq-ft-the-molly",
@@ -1444,7 +1773,16 @@
    "elevator",
    "in-law suite"
   ],
-  "summary": "3,492 sq ft elevated coastal house plan with 5 beds & 4.5 baths, up to 5.5. Elevator, two fireplaces, walk-in pantry, optional 3-car garage."
+  "summary": "3,492 sq ft elevated coastal house plan with 5 beds & 4.5 baths, up to 5.5. Elevator, two fireplaces, walk-in pantry, optional 3-car garage.",
+  "alsoKnownAs": [
+   "Elliston"
+  ],
+  "garage": "2-3 car drive-under detached",
+  "ceilings": "9' Lower / 10' First / 9' Second",
+  "roofPitch": "12:12 Primary / 3:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-olive-house",
@@ -1472,7 +1810,15 @@
   "features": [
    "cottage"
   ],
-  "summary": "1,400 sq ft modern coastal cottage house plan with 3 beds & 2.5 baths. Deep front porch, open-concept kitchen island."
+  "summary": "1,400 sq ft modern coastal cottage house plan with 3 beds & 2.5 baths. Deep front porch, open-concept kitchen island.",
+  "alsoKnownAs": [
+   "Harvest Moon"
+  ],
+  "garage": "1-car detached",
+  "ceilings": "9' First / 8' Second",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 50
  },
  {
   "handle": "palm-house",
@@ -1502,7 +1848,13 @@
    "pilings and stilts",
    "drive-under garage"
   ],
-  "summary": "3,445 sq ft 2-story coastal house plan with 4 beds & 3.5 baths. Exposed beams, screened porch with fireplace, open deck, primary balcony."
+  "summary": "3,445 sq ft 2-story coastal house plan with 4 beds & 3.5 baths. Exposed beams, screened porch with fireplace, open deck, primary balcony.",
+  "garage": "2-car drive-under",
+  "ceilings": "8' Lower / 10' First / 9' Second",
+  "roofPitch": "6:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "the-peach-house",
@@ -1530,7 +1882,12 @@
   "features": [
    "cottage"
   ],
-  "summary": "848 sq ft single-story coastal cottage house plan with 1 bed & 1.5 baths. Open living areas, U-shaped kitchen with peninsula."
+  "summary": "848 sq ft single-story coastal cottage house plan with 1 bed & 1.5 baths. Open living areas, U-shaped kitchen with peninsula.",
+  "garage": "none",
+  "ceilings": "9' First",
+  "roofPitch": "10:12",
+  "framing": "2x4 exterior walls",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "the-perry-garage",
@@ -1559,7 +1916,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "A two-bedroom garage apartment plan: 1,085 sq ft of living over an extra-deep two-car garage, with an optional second bath and a covered entry of its own."
+  "summary": "A two-bedroom garage apartment plan: 1,085 sq ft of living over an extra-deep two-car garage, with an optional second bath and a covered entry of its own.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 40
  },
  {
   "handle": "the-quinn",
@@ -1590,7 +1952,13 @@
    "in-law suite",
    "drive-under garage"
   ],
-  "summary": "2,343 sq ft elevated Coastal Country house plan with 3 beds & 3.5 baths. Metal roof, screened porch, fireplace, oversized kitchen island."
+  "summary": "2,343 sq ft elevated Coastal Country house plan with 3 beds & 3.5 baths. Metal roof, screened porch, fireplace, oversized kitchen island.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' Lower / 10' First",
+  "roofPitch": "8:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-quinn-crawlspace",
@@ -1616,7 +1984,15 @@
   "maxRidgeHeight": "37' 5\"",
   "studySetAvailable": false,
   "features": [],
-  "summary": "2,250 sq ft New American Country house plan on crawlspace with 3 beds & 3.5 baths. Metal roof, front porch, screened porch with French doors, fireplace."
+  "summary": "2,250 sq ft New American Country house plan on crawlspace with 3 beds & 3.5 baths. Metal roof, front porch, screened porch with French doors, fireplace.",
+  "alsoKnownAs": [
+   "McQuade Cottage I",
+   "McQuade Cottage II"
+  ],
+  "ceilings": "10' First",
+  "roofPitch": "8:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "2409-sq-ft-the-quinn-pilings",
@@ -1647,7 +2023,13 @@
    "in-law suite",
    "drive-under garage"
   ],
-  "summary": "2,409 sq ft elevated Coastal Country house plan on piling foundation with 3 beds & 3.5 baths. Metal roof, screened porch, fireplace."
+  "summary": "2,409 sq ft elevated Coastal Country house plan on piling foundation with 3 beds & 3.5 baths. Metal roof, screened porch, fireplace.",
+  "garage": "2-3 car drive-under carport",
+  "ceilings": "10' Lower / 10' First",
+  "roofPitch": "10:12 Primary / 3:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-upland-2",
@@ -1675,7 +2057,14 @@
   "features": [
    "beach"
   ],
-  "summary": "3,060 sq ft family beach house plan with 4-5 beds & 3.5 baths. Main-floor primary suite, flexible study, media room, bunk room."
+  "summary": "3,060 sq ft family beach house plan with 4-5 beds & 3.5 baths. Main-floor primary suite, flexible study, media room, bunk room.",
+  "alsoKnownAs": [
+   "Magill Bay"
+  ],
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-wave",
@@ -1704,7 +2093,14 @@
    "cottage",
    "beach"
   ],
-  "summary": "1,594 sq ft single-level coastal cottage house plan with 3 beds & 2.5 baths. Gable overhang, circular window, spacious deck, sliding doors."
+  "summary": "1,594 sq ft single-level coastal cottage house plan with 3 beds & 2.5 baths. Gable overhang, circular window, spacious deck, sliding doors.",
+  "alsoKnownAs": [
+   "Pentwater Cottage"
+  ],
+  "ceilings": "9' First",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "1596-sq-ft-the-wave-2",
@@ -1733,7 +2129,11 @@
    "cottage",
    "beach"
   ],
-  "summary": "1,599 sq ft single-story coastal cottage house plan with 2\u20133 beds & 2.5 baths. Spacious deck, circular window, prep island, sliding doors."
+  "summary": "1,599 sq ft single-story coastal cottage house plan with 2\u20133 beds & 2.5 baths. Spacious deck, circular window, prep island, sliding doors.",
+  "ceilings": "9' First",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "the-wren",
@@ -1764,7 +2164,16 @@
    "elevator",
    "drive-under garage"
   ],
-  "summary": "3,233 sq ft elevated coastal house plan with 4 beds & 3.5 baths. Vaulted ceilings with exposed beams, screened porch, main-floor primary suite."
+  "summary": "3,233 sq ft elevated coastal house plan with 4 beds & 3.5 baths. Vaulted ceilings with exposed beams, screened porch, main-floor primary suite.",
+  "alsoKnownAs": [
+   "Robbins Creek"
+  ],
+  "garage": "2-car drive-under",
+  "ceilings": "8' 8\" Lower / 10' First / 9' Second",
+  "roofPitch": "9:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "the-yellow-house",
@@ -1792,7 +2201,14 @@
   "features": [
    "cottage"
   ],
-  "summary": "840 sq ft compact cottage house plan with 1 bed & 1.5 baths. Built-in desk nook, eat-in island, arched doorways, walk-in closet with stacked W/D."
+  "summary": "840 sq ft compact cottage house plan with 1 bed & 1.5 baths. Built-in desk nook, eat-in island, arched doorways, walk-in closet with stacked W/D.",
+  "alsoKnownAs": [
+   "Buttermilk Cottage"
+  ],
+  "ceilings": "9' First / 8' Second",
+  "roofPitch": "12:12",
+  "framing": "2x4 exterior walls",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "1585-sq-ft-tilbury-lane",
@@ -1824,7 +2240,13 @@
    "carriage house",
    "drive-under garage"
   ],
-  "summary": "1,585 sq ft elevated carriage house plan with 3 beds, 3 baths over a two-car garage plus a flex bay for a guest suite, workshop or a third car. 31-ft deck."
+  "summary": "1,585 sq ft elevated carriage house plan with 3 beds, 3 baths over a two-car garage plus a flex bay for a guest suite, workshop or a third car. 31-ft deck.",
+  "garage": "2-car attached + flex bay",
+  "ceilings": "9' Ground / 9' Upper",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "groundLevel": "Parking, storage and a heated entry",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "the-upland-1",
@@ -1855,7 +2277,12 @@
    "beach",
    "drive-under garage"
   ],
-  "summary": "3,287 sq ft elevated coastal house plan on piers: 4-5 beds, 3.5 baths, a screened porch, media room, study and a 2-car drive-under garage."
+  "summary": "3,287 sq ft elevated coastal house plan on piers: 4-5 beds, 3.5 baths, a screened porch, media room, study and a 2-car drive-under garage.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "groundLevel": "Parking and storage",
+  "fitsLotsFromFt": 60
  },
  {
   "handle": "650-sq-ft-wilbury-garage-adu",
@@ -1884,7 +2311,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "650 sq ft carriage house garage ADU with board & batten siding, timber-framed gables & barn doors. 1BR 1BA above a 2-car garage. PDF plan set."
+  "summary": "650 sq ft carriage house garage ADU with board & batten siding, timber-framed gables & barn doors. 1BR 1BA above a 2-car garage. PDF plan set.",
+  "garage": "2-car drive-under",
+  "ceilings": "10' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "672-sq-ft-wilbury-24x28-garage-adu",
@@ -1913,7 +2345,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "672 sq ft 24x28 garage apartment plan with a full kitchen, in-unit laundry and walk-in closet above a 2-car garage. Drawn for a tight lot. PDF plan set."
+  "summary": "672 sq ft 24x28 garage apartment plan with a full kitchen, in-unit laundry and walk-in closet above a 2-car garage. Drawn for a tight lot. PDF plan set.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' First / 9' Second",
+  "roofPitch": "6:12 Primary / 10:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "winthrop-garage-adu-plan-1-bedroom",
@@ -1942,7 +2379,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "650 sq ft ADU above a 2-car garage with 1 bed, 1 bath, full kitchen, living area, walk-in closet & W/D. 32x25' slab foundation."
+  "summary": "650 sq ft ADU above a 2-car garage with 1 bed, 1 bath, full kitchen, living area, walk-in closet & W/D. 32x25' slab foundation.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "winthrop30-garage-adu",
@@ -1971,7 +2413,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "780 sq ft Craftsman garage ADU: 1 bed, 1 bath, private exterior stair, covered deck, open kitchen and living, two bath layout options. 31'8\" x 30' slab."
+  "summary": "780 sq ft Craftsman garage ADU: 1 bed, 1 bath, private exterior stair, covered deck, open kitchen and living, two bath layout options. 31'8\" x 30' slab.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' Garage / 9' Second Floor",
+  "roofPitch": "6:12 Main Gable / 10:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "winthrop35-garage-adu",
@@ -2000,7 +2447,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "980 sq ft Craftsman garage apartment with 1 bed, 1 bath, a front porch, open living, dining and kitchen, walk-in closet & a deep 2-car garage."
+  "summary": "980 sq ft Craftsman garage apartment with 1 bed, 1 bath, a front porch, open living, dining and kitchen, walk-in closet & a deep 2-car garage.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 35
  },
  {
   "handle": "winthrop35-garage-enclosed",
@@ -2029,7 +2481,12 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "887 sq ft enclosed ADU above a 2-car garage with 1 bed, 1 bath, full kitchen, living area, walk-in closet & W/D. Interior staircase."
+  "summary": "887 sq ft enclosed ADU above a 2-car garage with 1 bed, 1 bath, full kitchen, living area, walk-in closet & W/D. Interior staircase.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' First / 9' Second",
+  "roofPitch": "10:12",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 30
  },
  {
   "handle": "576-sq-ft-winthrop-studio-garage-adu",
@@ -2058,6 +2515,11 @@
    "garage ADU",
    "carriage house"
   ],
-  "summary": "576 sq ft studio ADU above a 2-car garage. Vaulted ceilings, outdoor deck, kitchenette & 1 bath."
+  "summary": "576 sq ft studio ADU above a 2-car garage. Vaulted ceilings, outdoor deck, kitchenette & 1 bath.",
+  "garage": "2-car drive-under",
+  "ceilings": "9' First / 8' Second",
+  "roofPitch": "6:12 Primary / 10:12 Secondary",
+  "framing": "2x6 exterior walls",
+  "fitsLotsFromFt": 30
  }
 ]

@@ -2,9 +2,18 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
   "version": "1.0",
   "protocolVersion": "2025-06-18",
-  "serverInfo": { "name": "intertwine-house-plans", "title": "Intertwine House Plans: Plan Finder", "version": "1.0.0" },
-  "description": "Read-only search of house plans by residential designer Angela Kamer, sold direct at intertwinehouseplans.com: bedrooms, square feet, footprint, elevated and pilings foundations, elevators, drive-under garages, in-law suites and garage ADUs, with lot-fit screening.",
+  "serverInfo": {
+    "name": "intertwine-house-plans",
+    "title": "Intertwine House Plans: Plan Finder",
+    "version": "1.2.0"
+  },
+  "description": "Read-only search of Intertwine House Plans, coastal and Southern house plans by residential designer Angela Kamer: bedrooms, square feet, footprint, elevated and pilings foundations, elevators, drive-under garages, in-law suites and garage ADUs, with lot-fit screening, photos, current package prices, study sets and buying help. Every result links to the plan's page.",
   "endpoint": "https://agents.intertwinehouseplans.com/mcp",
-  "transport": { "type": "streamable-http", "endpoint": "https://agents.intertwinehouseplans.com/mcp" },
-  "authentication": { "required": false }
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://agents.intertwinehouseplans.com/mcp"
+  },
+  "authentication": {
+    "required": false
+  }
 }
