@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "Intertwine House Plans: Plan Finder",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Read-only search of residential designer Angela Kamer's coastal and Southern house plans, sold direct at intertwinehouseplans.com. Specs, photos, packages and current prices for 68 plan sets. Also an MCP server (Streamable HTTP) at /mcp.",
     "contact": {
       "name": "Atlas Digital Design",
@@ -13,7 +13,7 @@
       "url": "https://github.com/AtlasDigitalDesign/intertwine-plans-mcp/blob/main/LICENSE"
     },
     "x-logo": {
-      "url": "https://intertwinehouseplans.com/cdn/shop/files/Intertwine_House_Plans_Logo.png"
+      "url": "https://agents.intertwinehouseplans.com/icon.png"
     }
   },
   "servers": [

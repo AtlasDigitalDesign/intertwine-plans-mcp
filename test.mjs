@@ -56,7 +56,7 @@ _setLive(live);
 const post = (body) => worker.fetch(new Request("https://x/mcp", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }));
 const tl = await (await post({ jsonrpc: "2.0", id: 1, method: "tools/list" })).json();
 assert.equal(tl.result.tools.length, 6);
-const card = await (await worker.fetch(new Request("https://x/.well-known/mcp/server-card.json"))).json(); assert.equal(card.serverInfo.version, "1.2.0");
+const card = await (await worker.fetch(new Request("https://x/.well-known/mcp/server-card.json"))).json(); assert.equal(card.serverInfo.version, "1.2.1");
 console.log("ALL TESTS PASSED");
 const gj = await (await worker.fetch(new Request("https://x/mcp/.well-known/glama.json"))).json();
 assert.equal(gj.claim, "glama_claim_FedZeY2NDZq66_6CNoDKVam8Q3bKL0rr"); console.log("GLAMA CLAIM OK");

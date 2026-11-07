@@ -6,9 +6,10 @@
 // study sets and the FAQ are read live from the store's public pages, cached for 30 minutes.
 // If the store can't be reached, every tool still answers from the baked specs.
 import PLANS from "./plans.json" with { type: "json" };
+import OPENAPI from "../openapi.json" with { type: "json" };
 
 const SITE = "https://intertwinehouseplans.com";
-const SERVER = { name: "intertwine-house-plans", title: "Intertwine House Plans: Plan Finder", version: "1.2.0" };
+const SERVER = { name: "intertwine-house-plans", title: "Intertwine House Plans: Plan Finder", version: "1.2.1" };
 const VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"];
 const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "POST, GET, OPTIONS", "Access-Control-Allow-Headers": "Content-Type, Accept, Mcp-Session-Id, Mcp-Protocol-Version", "Access-Control-Expose-Headers": "Mcp-Session-Id" };
 const UTM = "utm_source=mcp&utm_medium=agent&utm_campaign=plan_finder";
@@ -348,6 +349,8 @@ const DOCS = (origin) => page("Plan Finder documentation | Intertwine House Plan
 <li>Show me The Heron with photos and package prices.</li>
 <li>What comes in a plan set, and can I see the drawings before I buy?</li>
 </ul>
+<h2>Plain HTTP, no MCP client</h2>
+<p>The same catalog is one GET away at <code>${origin}/plans.json</code>: every plan with specs, photos, packages and current prices. An OpenAPI 3.0 description of that endpoint, the server card and <code>/mcp</code> is at <code>${origin}/openapi.json</code>.</p>
 <h2>Where the data comes from</h2>
 <p>Plan specifications are the public specs published on the store. Photos, package prices, sale prices, the full design write-up, study sets and the FAQ are read from the store's public pages and refreshed about every 30 minutes. If the store can't be reached, the tools still answer from the stored specs. The full data set is at <a href="${origin}/plans.json">${origin}/plans.json</a>.</p>
 <h2>Limits</h2>
@@ -408,6 +411,8 @@ export default {
     const url = new URL(request.url); const origin = url.origin;
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     if (url.pathname === "/.well-known/mcp/server-card.json") return json(CARD(origin));
+    // OpenAPI description of /plans.json, the server card and /mcp, for API directories (APIs.guru).
+    if (url.pathname === "/openapi.json") return json(OPENAPI);
     // Glama ownership claim for this endpoint; keep published to stay verified.
     if (url.pathname === "/mcp/.well-known/glama.json" || url.pathname === "/.well-known/glama.json")
       return json({ $schema: "https://glama.ai/mcp/schemas/connector.json", claim: GLAMA_CLAIM });
@@ -427,7 +432,7 @@ export default {
     if ((url.pathname === "/support" || url.pathname === "/support/") && request.method === "GET") return SUPPORT(origin);
     if (url.pathname === "/" && request.method === "GET") {
       if ((request.headers.get("Accept") || "").includes("text/html")) return DOCS(origin);
-      return json({ ...SERVER, about: "MCP server for searching Intertwine House Plans by spec. POST JSON-RPC to /mcp.", mcp: `${origin}/mcp`, card: `${origin}/.well-known/mcp/server-card.json`, data: `${origin}/plans.json`, docs: `${origin}/docs`, privacy: `${origin}/privacy`, store: SITE });
+      return json({ ...SERVER, about: "MCP server for searching Intertwine House Plans by spec. POST JSON-RPC to /mcp.", mcp: `${origin}/mcp`, card: `${origin}/.well-known/mcp/server-card.json`, data: `${origin}/plans.json`, openapi: `${origin}/openapi.json`, docs: `${origin}/docs`, privacy: `${origin}/privacy`, store: SITE });
     }
     if (url.pathname !== "/mcp") return json({ error: "Not found" }, 404);
     if (request.method === "GET") return json({ ...SERVER, transport: "streamable-http", post: `${origin}/mcp` }, 405, { Allow: "POST, OPTIONS" });

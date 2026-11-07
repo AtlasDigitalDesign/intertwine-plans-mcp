@@ -5,7 +5,7 @@
   "serverInfo": {
     "name": "intertwine-house-plans",
     "title": "Intertwine House Plans: Plan Finder",
-    "version": "1.2.0"
+    "version": "1.2.1"
   },
   "description": "Read-only search of Intertwine House Plans, coastal and Southern house plans by residential designer Angela Kamer: bedrooms, square feet, footprint, elevated and pilings foundations, elevators, drive-under garages, in-law suites and garage ADUs, with lot-fit screening, photos, current package prices, study sets and buying help. Every result links to the plan's page.",
   "endpoint": "https://agents.intertwinehouseplans.com/mcp",
