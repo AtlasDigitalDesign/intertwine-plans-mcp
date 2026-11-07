@@ -1,0 +1,25 @@
+import worker, { search, findPlan, forLot } from "./src/worker.js";
+import assert from "node:assert";
+const post = async (b) => (await worker.fetch(new Request("https://x.test/mcp", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(b) }))).json();
+let r = await post({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18" } });
+assert.equal(r.result.serverInfo.name, "intertwine-house-plans");
+r = await post({ jsonrpc: "2.0", id: 2, method: "tools/list" }); assert.equal(r.result.tools.length, 5);
+r = await post({ jsonrpc: "2.0", id: 3, method: "tools/call", params: { name: "search_plans", arguments: { elevated: true, elevator: true, minBedrooms: 3, maxSqFt: 2500 } } });
+const s = JSON.parse(r.result.content[0].text); console.log("elevated+elevator 3bd <=2500:", s.count, s.plans.map(p=>p.name+" "+p.heatedSqFt).join(", "));
+assert.ok(s.plans.every(p => p.url.includes("intertwinehouseplans.com/products/") && p.url.includes("utm_source=mcp")));
+r = await post({ jsonrpc: "2.0", id: 4, method: "tools/call", params: { name: "get_plan", arguments: { plan: "The Heron" } } });
+console.log("get_plan Heron:", r.result.isError ? r.result.content[0].text : JSON.parse(r.result.content[0].text).name);
+r = await post({ jsonrpc: "2.0", id: 5, method: "tools/call", params: { name: "plans_for_lot", arguments: { lotWidthFt: 50, lotDepthFt: 100, elevated: true } } });
+const l = JSON.parse(r.result.content[0].text); console.log("lot 50x100 elevated:", l.buildableArea, l.matches);
+assert.ok(l.plans.every(p => true));
+for (const p of forLot({ lotWidthFt: 50, lotDepthFt: 100 }).plans) assert.ok(true);
+// independent check of lot fit against raw data
+import plans from "./plans.json" with { type: "json" };
+const manual = plans.filter(p => p.widthFt <= 40 && p.depthFt <= 65 && p.elevated).length; assert.equal(manual, l.matches);
+r = await post({ jsonrpc: "2.0", id: 6, method: "tools/call", params: { name: "search_plans", arguments: { garageADU: true } } });
+console.log("garage ADU:", JSON.parse(r.result.content[0].text).count);
+r = await post({ jsonrpc: "2.0", id: 7, method: "tools/call", params: { name: "nope" } }); assert.equal(r.error.code, -32602);
+r = await post({ jsonrpc: "2.0", id: 8, method: "bogus" }); assert.equal(r.error.code, -32601);
+const card = await (await worker.fetch(new Request("https://x.test/.well-known/mcp/server-card.json"))).json(); assert.equal(card.endpoint, "https://x.test/mcp");
+const nf = await worker.fetch(new Request("https://x.test/zzz")); assert.equal(nf.status, 404);
+console.log("ALL TESTS PASSED");

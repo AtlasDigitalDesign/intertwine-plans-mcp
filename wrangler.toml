@@ -1,0 +1,5 @@
+name = "intertwine-plan-finder"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+# Route to add once DNS is decided, e.g.:
+# routes = [{ pattern = "agents.intertwinehouseplans.com", custom_domain = true }]
