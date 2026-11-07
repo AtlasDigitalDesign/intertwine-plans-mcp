@@ -3,3 +3,8 @@ main = "src/worker.js"
 compatibility_date = "2026-10-01"
 # Served on her domain (Cloudflare custom domain, live Nov 6 2026).
 routes = [{ pattern = "agents.intertwinehouseplans.com", custom_domain = true }]
+
+# Anonymous per-tool usage counts (see usagePoint in src/worker.js). Dataset is created on first deploy.
+[[analytics_engine_datasets]]
+binding = "USAGE"
+dataset = "plan_finder_usage"

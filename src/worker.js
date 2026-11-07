@@ -361,18 +361,18 @@ const DOCS = (origin) => page("Plan Finder documentation | Intertwine House Plan
 
 const PRIVACY = (origin) => page("Plan Finder privacy policy | Intertwine House Plans", `
 <h1>Plan Finder privacy policy</h1>
-<p class="muted">Effective November 6, 2026. Applies to the Plan Finder MCP server at ${origin}.</p>
+<p class="muted">Effective November 7, 2026. Applies to the Plan Finder MCP server at ${origin}.</p>
 <p>Plan Finder is a read-only search service for the house plans sold at <a href="${SITE}">intertwinehouseplans.com</a>. It is built and maintained by Atlas Digital Design LLC for Intertwine House Plans. This policy covers the server only. When you visit or buy from the store, the store's own <a href="${SITE}/policies/privacy-policy">privacy policy</a> applies.</p>
 <h2>What we collect</h2>
-<p>Plan Finder has no accounts, sign-in, cookies or keys. It does not ask for your name, email, address or payment details. The only thing it receives is the request your AI assistant sends, such as a search for "3 bedrooms on pilings". That request is used to build the answer and is not stored by the server.</p>
+<p>Plan Finder has no accounts, sign-in, cookies or keys. It does not ask for your name, email, address or payment details. The only thing it receives is the request your AI assistant sends, such as a search for "3 bedrooms on pilings". That request is used to build the answer. The server keeps anonymous usage counts, described below, and nothing that identifies you.</p>
 <h2>How it is used and stored</h2>
-<p>Each request is answered in memory and then discarded. The server keeps no database of requests and builds no profile of anyone. To answer, it reads the store's public product and FAQ pages and keeps a copy of that public catalog data for about 30 minutes.</p>
+<p>Each request is answered in memory. For each tool call the server records an anonymous count: which tool was used, the structured filters it was given (for example bedrooms, lot width or a feature such as elevator), which plans came back, and the general kind of assistant that asked (for example ChatGPT or Claude, read from the user agent of the request). It does not record free-text words typed into a search or question, IP addresses, or anything else about the person. The counts show which plans and features assistants ask about, and are kept for up to three months. The server builds no profile of anyone. To answer, it reads the store's public product and FAQ pages and keeps a copy of that public catalog data for about 30 minutes.</p>
 <h2>Hosting</h2>
 <p>The server runs on Cloudflare Workers. Like any web host, Cloudflare may process standard request information such as IP address, time and user agent to deliver and protect the service, under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p>
 <h2>Sharing</h2>
 <p>We do not sell, rent or share request data with anyone. Links in answers point to the store and carry a tag (<code>utm_source=mcp</code>) so the store can count visits that came from an assistant. That tag identifies the channel, not you.</p>
 <h2>Retention</h2>
-<p>The server retains no request data. Any request logs kept by the host are kept only as long as the host's own policy allows for security and operations.</p>
+<p>Anonymous usage counts are kept for up to three months. No other request data is retained by the server. Any request logs kept by the host are kept only as long as the host's own policy allows for security and operations.</p>
 <h2>Children</h2>
 <p>The service is meant for adults shopping for house plans and does not knowingly collect anything from children.</p>
 <h2>Changes and contact</h2>
@@ -381,7 +381,7 @@ const PRIVACY = (origin) => page("Plan Finder privacy policy | Intertwine House 
 
 const TERMS = (origin) => page("Plan Finder terms of service | Intertwine House Plans", `
 <h1>Plan Finder terms of service</h1>
-<p class="muted">Effective November 6, 2026. Applies to the Plan Finder MCP server at ${origin}.</p>
+<p class="muted">Effective November 7, 2026. Applies to the Plan Finder MCP server at ${origin}.</p>
 <p>Plan Finder is a free, read-only search service for the house plans sold at <a href="${SITE}">intertwinehouseplans.com</a>. It is built and maintained by Atlas Digital Design LLC for Intertwine House Plans. By connecting to it or using answers it returns, you agree to these terms.</p>
 <h2>What the service does</h2>
 <p>Plan Finder returns public information about the plans in the store: specifications, photos, package prices, study sets and answers from the store's help pages. It does not sell anything, take payments, create accounts or change any data. Every purchase happens on the store, under the store's own <a href="${SITE}/policies/terms-of-service">terms of service</a>.</p>
@@ -406,8 +406,49 @@ const SUPPORT = (origin) => page("Plan Finder support | Intertwine House Plans",
 <h2>More</h2>
 <p><a href="${origin}/docs">How Plan Finder works</a> · <a href="${origin}/privacy">Privacy</a> · <a href="${origin}/terms">Terms</a></p>`);
 
+// ---------- anonymous usage counts ----------
+// One data point per tool call in Cloudflare Analytics Engine (binding USAGE). Records the tool, the structured
+// filters (numbers, yes/no, feature, topic, plan name), which plans came back, and the assistant family from the
+// User-Agent. Never records free-text fields (text, question), IP addresses or anything else about the person.
+const FREE_TEXT = new Set(["text", "question"]);
+function family(ua = "") {
+  const u = ua.toLowerCase();
+  if (/openai|chatgpt|gpt/.test(u)) return "openai";
+  if (/claude|anthropic/.test(u)) return "anthropic";
+  if (/perplexity/.test(u)) return "perplexity";
+  if (/gemini|google/.test(u)) return "google";
+  if (/microsoft|copilot|bing/.test(u)) return "microsoft";
+  if (/glama|smithery|inspector|lobehub|pulsemcp|registry/.test(u)) return "directory";
+  if (/curl|python|node|axios|go-http|undici|okhttp/.test(u)) return "script";
+  return ua ? "other" : "none";
+}
+export function usagePoint(msg, res, ua) {
+  if (msg?.method !== "tools/call") return null;
+  const name = String(msg.params?.name || "unknown").slice(0, 40);
+  const args = msg.params?.arguments || {};
+  const filters = Object.entries(args).filter(([k, v]) => !FREE_TEXT.has(k) && v !== undefined && v !== null && typeof v !== "object")
+    .map(([k, v]) => `${k}=${String(v).slice(0, 40)}`).sort().join(";").slice(0, 400);
+  const usedText = Object.keys(args).some((k) => FREE_TEXT.has(k) && args[k]);
+  let plans = [], count = 0, error = 0;
+  try {
+    error = res?.error || res?.result?.isError ? 1 : 0;
+    const body = JSON.parse(res?.result?.content?.[0]?.text || "{}");
+    const list = body.plans || (body.name ? [body] : []);
+    plans = list.map((x) => x.name).filter(Boolean).slice(0, 10);
+    count = body.count ?? body.matches ?? plans.length;
+  } catch { /* text answer, nothing to parse */ }
+  return { indexes: [name], blobs: [name, filters, plans.join("|").slice(0, 500), family(ua), usedText ? "text" : ""], doubles: [Number(count) || 0, error] };
+}
+function record(env, ctx, msgs, results, ua) {
+  if (!env?.USAGE) return;
+  msgs.forEach((m, i) => {
+    const pt = usagePoint(m, results[i], ua);
+    if (pt) try { env.USAGE.writeDataPoint(pt); } catch { /* counting never breaks an answer */ }
+  });
+}
+
 export default {
-  async fetch(request) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url); const origin = url.origin;
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     if (url.pathname === "/.well-known/mcp/server-card.json") return json(CARD(origin));
@@ -438,7 +479,8 @@ export default {
     if (request.method === "GET") return json({ ...SERVER, transport: "streamable-http", post: `${origin}/mcp` }, 405, { Allow: "POST, OPTIONS" });
     if (request.method !== "POST") return json(fail(null, -32600, "Use POST"), 405, { Allow: "POST, OPTIONS" });
     let body; try { body = await request.json(); } catch { return json(fail(null, -32700, "Parse error"), 400); }
-    if (Array.isArray(body)) { const out = (await Promise.all(body.map((m) => handle(m)))).filter(Boolean); return out.length ? json(out) : new Response(null, { status: 202, headers: CORS }); }
-    const res = await handle(body); return res ? json(res) : new Response(null, { status: 202, headers: CORS });
+    const ua = request.headers.get("User-Agent") || "";
+    if (Array.isArray(body)) { const all = await Promise.all(body.map((m) => handle(m))); record(env, ctx, body, all, ua); const out = all.filter(Boolean); return out.length ? json(out) : new Response(null, { status: 202, headers: CORS }); }
+    const res = await handle(body); record(env, ctx, [body], [res], ua); return res ? json(res) : new Response(null, { status: 202, headers: CORS });
   },
 };
