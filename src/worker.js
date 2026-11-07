@@ -289,10 +289,61 @@ export async function handle(msg, fetcher) {
 export const CARD = (origin) => ({
   $schema: "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json", version: "1.0", protocolVersion: "2025-06-18", serverInfo: SERVER,
   description: "Read-only search of Intertwine House Plans, coastal and Southern house plans by residential designer Angela Kamer: bedrooms, square feet, footprint, elevated and pilings foundations, elevators, drive-under garages, in-law suites and garage ADUs, with lot-fit screening, photos, current package prices, study sets and buying help. Every result links to the plan's page.",
-  documentationUrl: `${origin}/`, endpoint: `${origin}/mcp`, transport: { type: "streamable-http", endpoint: `${origin}/mcp` },
+  documentationUrl: `${origin}/docs`, privacyPolicyUrl: `${origin}/privacy`, endpoint: `${origin}/mcp`, transport: { type: "streamable-http", endpoint: `${origin}/mcp` },
   capabilities: { tools: { listChanged: false }, resources: {}, prompts: {} }, authentication: { required: false },
   tools: TOOLS.map((t) => ({ name: t.name, description: t.title })),
 });
+
+// Public pages for directory listings: documentation and privacy policy.
+const CONTACT = "jeff@atlasdigital.design";
+const page = (title, body) => new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><style>:root{--ink:#2b2b2b;--muted:#5f5f5f;--line:#e4e1da;--bg:#fbfaf7;--link:#7a5c1e}@media (prefers-color-scheme:dark){:root{--ink:#e9e6df;--muted:#aaa59b;--line:#3a3833;--bg:#1d1c1a;--link:#d4b06a}}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif}main{max-width:720px;margin:0 auto;padding:40px 20px 64px}h1{font-size:28px;line-height:1.25;margin:0 0 6px}h2{font-size:19px;margin:32px 0 8px;padding-top:16px;border-top:1px solid var(--line)}p,li{color:var(--ink)}.muted{color:var(--muted);font-size:14px}a{color:var(--link)}code{font:14px/1.4 Menlo,Consolas,monospace;background:rgba(127,127,127,.12);padding:2px 5px;border-radius:3px;word-break:break-all}ul{padding-left:20px}</style></head><body><main>${body}</main></body></html>`,
+  { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=3600", ...CORS } });
+
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+const DOCS = (origin) => page("Plan Finder documentation | Intertwine House Plans", `
+<h1>Intertwine House Plans: Plan Finder</h1>
+<p class="muted">MCP server, version ${SERVER.version}. Read-only. No sign-in.</p>
+<p>Plan Finder lets an AI assistant search the coastal and Southern house plans that residential designer Angela Kamer sells at <a href="${SITE}">intertwinehouseplans.com</a>. It answers questions buyers actually ask (bedrooms, square feet, lot width, elevated and pilings foundations, elevators, drive-under garages, in-law suites, garage apartments) and every answer links to the plan's own page on the store.</p>
+<h2>Connect</h2>
+<p>Endpoint: <code>${origin}/mcp</code></p>
+<p>Transport is Streamable HTTP. There is no account, key or login. In Claude, add it as a custom connector with that URL. Any MCP client that supports remote servers works the same way.</p>
+<h2>Tools</h2>
+<ul>${TOOLS.map((t) => `<li><strong>${esc(t.title)}</strong> (<code>${t.name}</code>). ${esc(t.description)}</li>`).join("")}</ul>
+<p>All six tools are marked read-only. None of them write, buy, sign in or contact anyone.</p>
+<h2>Things to try</h2>
+<ul>
+<li>Find a 3 bedroom elevated beach house under 2,000 square feet with an elevator.</li>
+<li>Which plans fit a 50 by 100 foot lot with 5 foot side setbacks?</li>
+<li>Show me The Heron with photos and package prices.</li>
+<li>What comes in a plan set, and can I see the drawings before I buy?</li>
+</ul>
+<h2>Where the data comes from</h2>
+<p>Plan specifications are the public specs published on the store. Photos, package prices, sale prices, the full design write-up, study sets and the FAQ are read from the store's public pages and refreshed about every 30 minutes. If the store can't be reached, the tools still answer from the stored specs. The full data set is at <a href="${origin}/plans.json">${origin}/plans.json</a>.</p>
+<h2>Limits</h2>
+<p>Lot-fit results are a first screen. Setbacks, flood zones, height limits and local codes have to be confirmed with the jurisdiction and the designer. Buying happens on the store, never inside the assistant.</p>
+<h2>Support</h2>
+<p>Questions or problems: <a href="mailto:${CONTACT}">${CONTACT}</a>. Source code: <a href="https://github.com/AtlasDigitalDesign/intertwine-plans-mcp">github.com/AtlasDigitalDesign/intertwine-plans-mcp</a>. Privacy: <a href="${origin}/privacy">${origin}/privacy</a>.</p>
+<p class="muted">Built and maintained by Atlas Digital Design LLC for Intertwine House Plans.</p>`);
+
+const PRIVACY = (origin) => page("Plan Finder privacy policy | Intertwine House Plans", `
+<h1>Plan Finder privacy policy</h1>
+<p class="muted">Effective November 6, 2026. Applies to the Plan Finder MCP server at ${origin}.</p>
+<p>Plan Finder is a read-only search service for the house plans sold at <a href="${SITE}">intertwinehouseplans.com</a>. It is built and maintained by Atlas Digital Design LLC for Intertwine House Plans. This policy covers the server only. When you visit or buy from the store, the store's own <a href="${SITE}/policies/privacy-policy">privacy policy</a> applies.</p>
+<h2>What we collect</h2>
+<p>Plan Finder has no accounts, sign-in, cookies or keys. It does not ask for your name, email, address or payment details. The only thing it receives is the request your AI assistant sends, such as a search for "3 bedrooms on pilings". That request is used to build the answer and is not stored by the server.</p>
+<h2>How it is used and stored</h2>
+<p>Each request is answered in memory and then discarded. The server keeps no database of requests and builds no profile of anyone. To answer, it reads the store's public product and FAQ pages and keeps a copy of that public catalog data for about 30 minutes.</p>
+<h2>Hosting</h2>
+<p>The server runs on Cloudflare Workers. Like any web host, Cloudflare may process standard request information such as IP address, time and user agent to deliver and protect the service, under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>.</p>
+<h2>Sharing</h2>
+<p>We do not sell, rent or share request data with anyone. Links in answers point to the store and carry a tag (<code>utm_source=mcp</code>) so the store can count visits that came from an assistant. That tag identifies the channel, not you.</p>
+<h2>Retention</h2>
+<p>The server retains no request data. Any request logs kept by the host are kept only as long as the host's own policy allows for security and operations.</p>
+<h2>Children</h2>
+<p>The service is meant for adults shopping for house plans and does not knowingly collect anything from children.</p>
+<h2>Changes and contact</h2>
+<p>If this policy changes, the effective date above will change with it. Questions: <a href="mailto:${CONTACT}">${CONTACT}</a>.</p>`);
 
 export default {
   async fetch(request) {
@@ -303,8 +354,12 @@ export default {
     if (url.pathname === "/mcp/.well-known/glama.json" || url.pathname === "/.well-known/glama.json")
       return json({ $schema: "https://glama.ai/mcp/schemas/connector.json", claim: GLAMA_CLAIM });
     if (url.pathname === "/plans.json") { const live = await loadLive(); return json({ source: SITE, designer: DESIGNER.designer, count: PLANS.length, plans: PLANS.map((p) => full(p, live)) }); }
-    if (url.pathname === "/" && request.method === "GET")
-      return json({ ...SERVER, about: "MCP server for searching Intertwine House Plans by spec. POST JSON-RPC to /mcp.", mcp: `${origin}/mcp`, card: `${origin}/.well-known/mcp/server-card.json`, data: `${origin}/plans.json`, store: SITE });
+    if ((url.pathname === "/docs" || url.pathname === "/docs/") && request.method === "GET") return DOCS(origin);
+    if ((url.pathname === "/privacy" || url.pathname === "/privacy/") && request.method === "GET") return PRIVACY(origin);
+    if (url.pathname === "/" && request.method === "GET") {
+      if ((request.headers.get("Accept") || "").includes("text/html")) return DOCS(origin);
+      return json({ ...SERVER, about: "MCP server for searching Intertwine House Plans by spec. POST JSON-RPC to /mcp.", mcp: `${origin}/mcp`, card: `${origin}/.well-known/mcp/server-card.json`, data: `${origin}/plans.json`, docs: `${origin}/docs`, privacy: `${origin}/privacy`, store: SITE });
+    }
     if (url.pathname !== "/mcp") return json({ error: "Not found" }, 404);
     if (request.method === "GET") return json({ ...SERVER, transport: "streamable-http", post: `${origin}/mcp` }, 405, { Allow: "POST, OPTIONS" });
     if (request.method !== "POST") return json(fail(null, -32600, "Use POST"), 405, { Allow: "POST, OPTIONS" });
