@@ -14,6 +14,7 @@ const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods
 const UTM = "utm_source=mcp&utm_medium=agent&utm_campaign=plan_finder";
 const LIVE_TTL_MS = 30 * 60 * 1000;
 const MAX_IMAGES = 8;
+const GLAMA_CLAIM = "glama_claim_FedZeY2NDZq66_6CNoDKVam8Q3bKL0rr";
 
 const FEATURES = ["elevated coastal", "pilings and stilts", "drive-under garage", "beach", "in-law suite", "elevator", "cottage", "carriage house", "garage ADU", "Low Country"];
 
@@ -298,6 +299,9 @@ export default {
     const url = new URL(request.url); const origin = url.origin;
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     if (url.pathname === "/.well-known/mcp/server-card.json") return json(CARD(origin));
+    // Glama ownership claim for this endpoint; keep published to stay verified.
+    if (url.pathname === "/mcp/.well-known/glama.json" || url.pathname === "/.well-known/glama.json")
+      return json({ $schema: "https://glama.ai/mcp/schemas/connector.json", claim: GLAMA_CLAIM });
     if (url.pathname === "/plans.json") { const live = await loadLive(); return json({ source: SITE, designer: DESIGNER.designer, count: PLANS.length, plans: PLANS.map((p) => full(p, live)) }); }
     if (url.pathname === "/" && request.method === "GET")
       return json({ ...SERVER, about: "MCP server for searching Intertwine House Plans by spec. POST JSON-RPC to /mcp.", mcp: `${origin}/mcp`, card: `${origin}/.well-known/mcp/server-card.json`, data: `${origin}/plans.json`, store: SITE });
