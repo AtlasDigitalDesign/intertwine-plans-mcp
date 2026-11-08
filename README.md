@@ -1,5 +1,7 @@
 # Intertwine House Plans: Plan Finder MCP server
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/atlasdigitaldesign/intertwine-plans-mcp) [![Intertwine House Plans MCP connector](https://glama.ai/mcp/connectors/com.intertwinehouseplans.agents/intertwine-house-plans-plan-finder/badges/score.svg)](https://glama.ai/mcp/connectors/com.intertwinehouseplans.agents/intertwine-house-plans-plan-finder)
+
 A read-only MCP server that lets AI assistants search the house plans of residential designer Angela Kamer, sold direct at [intertwinehouseplans.com](https://intertwinehouseplans.com). Buyers ask for things like an elevated coastal plan with an elevator under 2,000 square feet, or a plan that fits a 50 by 100 foot lot. The server answers with matching plans, their specs, photos, current prices and a link to each plan's own page.
 
 Endpoint: https://agents.intertwinehouseplans.com/mcp (Streamable HTTP, stateless, no auth)
