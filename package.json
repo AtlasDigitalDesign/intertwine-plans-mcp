@@ -1,6 +1,6 @@
 {
   "name": "intertwine-plans-mcp",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Read-only MCP server for searching Angela Kamer's coastal and Southern house plans by bedrooms, square feet, lot width, pilings and elevator, with photos, current prices and lot-fit screening. Every result links to the plan page on intertwinehouseplans.com.",
   "homepage": "https://agents.intertwinehouseplans.com/docs",
   "repository": {
@@ -14,7 +14,7 @@
   "type": "module",
   "main": "src/worker.js",
   "scripts": {
-    "test": "node test.mjs",
+    "test": "node tests/worker.test.mjs",
     "deploy": "npx wrangler deploy"
   }
 }

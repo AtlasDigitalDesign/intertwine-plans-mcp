@@ -9,7 +9,8 @@ import PLANS from "./plans.json" with { type: "json" };
 import OPENAPI from "../openapi.json" with { type: "json" };
 
 const SITE = "https://intertwinehouseplans.com";
-const SERVER = { name: "intertwine-house-plans", title: "Intertwine House Plans: Plan Finder", version: "1.2.1" };
+const SERVER = { name: "intertwine-house-plans", title: "Intertwine House Plans: Plan Finder", version: "1.2.2",
+  icons: [{ src: "https://agents.intertwinehouseplans.com/icon.png", mimeType: "image/png", sizes: ["512x512"] }] };
 const VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"];
 const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "POST, GET, OPTIONS", "Access-Control-Allow-Headers": "Content-Type, Accept, Mcp-Session-Id, Mcp-Protocol-Version", "Access-Control-Expose-Headers": "Mcp-Session-Id" };
 const UTM = "utm_source=mcp&utm_medium=agent&utm_campaign=plan_finder";

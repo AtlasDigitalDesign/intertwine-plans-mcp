@@ -7,7 +7,8 @@ routes = [{ pattern = "agents.intertwinehouseplans.com", custom_domain = true }]
 # Anonymous per-tool usage counts (see usagePoint in src/worker.js). Dataset is created on first deploy.
 # Turned off Nov 6 2026 so the deploy goes through: Cloudflare error 10089 blocks uploads with this binding on
 # Free accounts until the account is opted in (workers-sdk #9312). worker.js counts nothing when USAGE is absent.
-# Re-enable by uncommenting the three lines once the dashboard binding opt-in works.
-# [[analytics_engine_datasets]]
-# binding = "USAGE"
-# dataset = "plan_finder_usage"
+# Re-enabled Nov 12 2026: the plan_finder_usage dataset was created in the dashboard (Workers > Analytics Engine),
+# which opts the account in. If a deploy still fails with error 10089, comment the three lines out again.
+[[analytics_engine_datasets]]
+binding = "USAGE"
+dataset = "plan_finder_usage"

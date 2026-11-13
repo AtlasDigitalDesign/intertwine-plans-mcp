@@ -1,13 +1,23 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.AtlasDigitalDesign/intertwine-plans",
   "description": "Search Angela Kamer's coastal house plans by beds, sq ft, lot width, pilings and elevator.",
-  "status": "active",
+  "title": "Intertwine House Plans: Plan Finder",
+  "websiteUrl": "https://agents.intertwinehouseplans.com/docs",
+  "icons": [
+    {
+      "src": "https://agents.intertwinehouseplans.com/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
   "repository": {
     "url": "https://github.com/AtlasDigitalDesign/intertwine-plans-mcp",
     "source": "github"
   },
-  "version": "1.2.1",
+  "version": "1.2.2",
   "remotes": [
     {
       "type": "streamable-http",
